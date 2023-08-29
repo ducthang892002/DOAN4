@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A28BDA"
+    tools:context=".Activity.SpCartActivity"
+    android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeRefreshLayoutCart"
+        android:layout_width="match_parent"
+        android:layout_height="700dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="1"
+                        android:text="Giỏ hàng"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+
+                    <TextView
+                        android:id="@+id/TextView_Amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="SL"
+                        android:textColor="#FF5722"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <androidx.core.widget.NestedScrollView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="627dp"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/RecyclerView_Cart"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/LinearLayout_BuyProduct"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+                                <android.widget.Button
+                                    android:id="@+id/Button_BuyProduct"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@drawable/editnhap"
+                                    android:padding="10dp"
+                                    android:text="Mua hàng ngay!"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/black"
+                                    android:textSize="17dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LinearLayout_Cart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="40dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="Tổng tiền :"
+                                        android:textColor="@color/white"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/TextView_TotalMoney"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textColor="#FF5722"
+                                        android:textSize="25dp" />
+                                </LinearLayout>
+
+                                <android.widget.Button
+                                    android:id="@+id/Button_Order"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="20dp"
+                                    android:background="@drawable/btn7"
+                                    android:text="Đặt hàng"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="16dp" />
+
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:backgroundTint="@color/white"
+                            android:gravity="center"
+                            android:paddingTop="20dp"
+                            android:text="Gợi ý sản phẩm"
+                            android:textColor="@color/black"
+                            android:textSize="25sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/RecyclerView_ProductLike"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>

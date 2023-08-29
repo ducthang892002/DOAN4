@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gucci1"
+    tools:context=".Signup">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:padding="50dp"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:text="MY GUCCI ACCOUNT"
+        android:fontFamily="@font/arsenal"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/editsignin"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <EditText
+                android:layout_marginTop="10dp"
+                android:id="@+id/name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editnhap"
+                android:drawableStart="@drawable/baseline_drive_file_rename_outline_24"
+                android:drawablePadding="30dp"
+                android:padding="20dp" />
+
+            <EditText
+                android:id="@+id/taikhoan1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editnhap"
+                android:drawableStart="@drawable/baseline_person_24"
+                android:drawablePadding="30dp"
+                android:padding="20dp" />
+
+            <EditText
+                android:id="@+id/matkhau1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editnhap"
+                android:drawableStart="@drawable/baseline_lock_person_24"
+                android:drawablePadding="30dp"
+                android:padding="20dp" />
+            <EditText
+                android:id="@+id/sodienthoai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/editnhap"
+                android:drawableStart="@drawable/baseline_contact_phone_24"
+                android:drawablePadding="30dp"
+                android:padding="20dp" />
+            <EditText
+                android:id="@+id/diachi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/editnhap"
+                android:drawableStart="@drawable/baseline_add_location_24"
+                android:drawablePadding="30dp"
+                android:padding="20dp" />
+
+            <Button
+                android:onClick="onClickSignup"
+                android:id="@+id/signuptc"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/arsenal"
+                android:text="CONTINUE MY ACCOUNT"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
